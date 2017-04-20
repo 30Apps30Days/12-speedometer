@@ -213,6 +213,8 @@ var app = {
   start: function () {
     this.options.debug && console.log('.start()');
     if(this.watch) { this.stop(); }
+
+    plugins.insomnia.keepAwake();
     this.watch = navigator.geolocation.watchPosition(this.tick.bind(this),
     function (err) { // error handler
       console.error(err);
@@ -249,6 +251,7 @@ var app = {
 
   stop: function () {
     this.options.debug && console.log('stop()');
+    plugins.insomnia.allowSleepAgain();
     if(this.watch) {
       navigator.geolocation.clearWatch(this.watch);
       this.watch = null;
