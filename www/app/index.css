@@ -73,3 +73,19 @@ footer a {
   text-align: center;
   vertical-align: center;
 }
+
+#speed {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 35vmin;
+  font-weight: bold;
+
+  transform: translateX(-50%) translateY(-5vmin);
+}
+
+#units {
+  position: absolute;
+  font-size: 10vmin;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(25vmin);
+}

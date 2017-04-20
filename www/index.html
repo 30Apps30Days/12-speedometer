@@ -26,6 +26,35 @@
         <span class="mdl-layout-title">Speedometer</span>
 
         <form id="options" action="#">
+          <p>Monitor your speed.</p>
+
+          <div>
+            <label for="opt-units">Units</label>
+            <!-- <em class="help-text"></em> -->
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+              for="units-mph">
+              <input id="units-mph" name="opt-units" type="radio"
+                class="mdl-radio__button" value="mph" checked />
+              <span class="mdl-radio__label">MPH</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+              for="units-kph">
+              <input id="units-kph" name="opt-units" type="radio"
+                class="mdl-radio__button" value="kph" />
+              <span class="mdl-radio__label">KPH</span>
+            </label>
+          </div>
+
+          <br />
+          <div>
+            <label>Allow Interruptions</label>
+            <label for="btf"
+            class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+            <input id="btf" type="checkbox"
+              class="mdl-checkbox__input" />
+            <span class="mdl-checkbox__label">Back to the Future</span>
+          </label>
+          </div>
         </form>
 
         <footer>
@@ -36,12 +65,16 @@
             </a>
           </nav>
 
-          Idea by PLACEHOLDER<br />
+          Idea by Adam Lamport.<br />
           App by <a href="http://metaist.com">Metaist LLC</a>
         </footer>
 
       </div>
       <main class="mdl-layout__content page-content">
+        <img id="circle" src="app/circle.svg" class="center-center" />
+        <div id="speed" class="center-center">&mdash;</div>
+        <div id="units"></div>
+        <video src="" class="center-center"></video>
       </main>
     </div>
 
